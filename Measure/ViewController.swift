@@ -18,8 +18,9 @@ class ViewController: UIViewController {
 
 
     @IBAction func convertMeasure(_ sender: Any) {
-        let yard = Double(textInput.text ?? "0")! * 1.09361
-        textLabel.text = String(yard)
+        let converter = Converter()
+                
+        textLabel.text = converter.convertUnit(input: textInput.text ?? "")
     }
 }
 
